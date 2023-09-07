@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Board.scss'
+import './SeekProject.scss'
 
 const Board = () => {
   return (
