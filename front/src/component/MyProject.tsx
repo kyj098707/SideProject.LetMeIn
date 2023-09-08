@@ -1,39 +1,11 @@
 import React from 'react'
-import './SeekProject.scss'
-import { Link } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
+// import { Modal } from 'antd'
+import './MyProject.scss'
 
-const Board = () => {
+const MyProject = () => {
   return (
-    <div className='board-content'>
-      <div className='category'>
-        <div>
-          <span>기간</span>
-          <button>기간</button>
-        </div>
-        <div>
-          <span>인원</span>
-          <button>인원</button>
-        </div>
-        <div>
-          <span>역할</span>
-          <button>역할</button>
-        </div>
-        <div>
-          <span>ㅇㅇ</span>
-          <button>ㅇㅇ</button>
-        </div>
-      </div>
-
-      <div className='content-title'>
-        <span>프로젝트 구해요 👋</span>
-        <div>
-          <button>F5</button>
-          <button>모집글만</button>
-          <button><Link to='/createproject'>글쓰기</Link></button>
-          <button><Link to='/myproject'>내 프로젝트(임시)</Link></button>
-        </div>
-      </div>
-      
+    <div>
       <div className='items'>
         <div className='item'>
           <span>같이 하실 분</span>
@@ -79,4 +51,4 @@ const Board = () => {
   )
 }
 
-export default Board
+export default MyProject

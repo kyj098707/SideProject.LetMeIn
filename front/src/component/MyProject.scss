@@ -1,0 +1,33 @@
+
+.items{
+  display: flex;
+  margin-top: 100px;
+
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid 1px rgb(220, 220, 220);
+    transition: all 0.25s ease;
+
+    > div:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+    }
+    > div:last-child {
+      display: flex;
+      > div{
+        margin-right: 10px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
