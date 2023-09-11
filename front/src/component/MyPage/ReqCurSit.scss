@@ -1,0 +1,19 @@
+.ReqCurSit-container {
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px rgb(223, 223, 223);
+
+    .btns {
+      display: flex;
+      
+      div {
+        text-align: center;
+        width: 50%;
+      }
+    }
+  }
+}
