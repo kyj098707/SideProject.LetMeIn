@@ -1,25 +1,20 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react'
+import React, { useState, useRef, FormEvent } from 'react'
 import './CreateProject.scss'
 
 const CreateProject = () => {
-  const [textarea, setTextarea] = useState("")
-
-
-  const handleTextarea = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setTextarea(e.target.value)
-  }
+  const titleRef = useRef<HTMLInputElement>(null)
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
   
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    console.log(e.target)
-    console.dir(e.target)
-  }
 
+    console.log(textareaRef.current!.value)
+  }
 
   return (
     <div className="createProject-container">
       <form onSubmit={handleSubmit}>
-        <input type="text" />
+        <input type="text" ref={titleRef}/>
 
         <span>* 필수 입력 항목</span>
 
@@ -28,7 +23,7 @@ const CreateProject = () => {
           id=""
           cols={30}
           rows={10}
-          onChange={handleTextarea}
+          ref={textareaRef}
         ></textarea>
         <button type="submit">작성</button>
       </form>
