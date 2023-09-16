@@ -5,7 +5,18 @@
   align-items: center;
   width: 50%;
 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
   .member-question {
     display: flex;
+
+    > span:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+      color: blue;
+    }
   }
 }

@@ -5,7 +5,7 @@ import LogIn from './pages/LogIn/LogIn';
 import SeekProject from './pages/SeekProject/SeekProject';
 import CreateProject from './pages/CreateProject/CreateProject';
 import MyProject from './component/MyPage/MyProject';
-import ReqCurSit from './component/MyPage/ReqCurSit';
+import ReqApply from './component/MyPage/ReqApply';
 
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/login" element={<LogIn />}/>
         <Route path="/createproject" element={<CreateProject />}/>
         <Route path="/myproject" element={<MyProject />}/>
-        <Route path="/reqcursit" element={<ReqCurSit />}/>
+        <Route path="/reqapply" element={<ReqApply />}/>
       </Routes>
     </>
   );
