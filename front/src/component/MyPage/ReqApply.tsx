@@ -1,5 +1,5 @@
 import React from 'react'
-import './ReqCurSit.scss'
+import './ReqApply.scss'
 
 const ReqCurSit = () => {
   return (

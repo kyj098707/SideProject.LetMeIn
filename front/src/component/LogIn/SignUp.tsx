@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState, Dispatch, SetStateAction} from 'react'
 
 import './SignUp.scss'
 
-const SignUp = () => {
+interface Props {
+  setActiveLink : Dispatch<SetStateAction<string>>
+}
+
+const SignUp: React.FC<Props> = (props) => {
+  const goToSignIn = () => {
+    props.setActiveLink('signIn')
+  }
+
   return (
     <div className='signup-container'>
       <span>회원가입</span>
-      <input type="text" /> 
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
+      <input type="text" placeholder="아이디"/> 
+      <input type="password" placeholder="비밀번호"/>
+      <input type="password" placeholder="비밀번호 확인"/>
+      <input type="text" placeholder="닉네임"/>
       <button>회원가입</button>
       <div className='member-question'>
-        <span>회원이신가요? </span>
-        <span> 로그인</span>
+        <span>회원이신가요?</span>
+        <span onClick={goToSignIn}>로그인</span>
       </div>
     </div>
   )

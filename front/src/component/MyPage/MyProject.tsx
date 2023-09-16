@@ -1,51 +1,75 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 // import { Modal } from 'antd'
+
+import { Project } from '../../model/type'
 import './MyProject.scss'
 
-const MyProject = () => {
+let data: Project[] =[
+  {
+    state: true,
+    title: "같이 하실 분",
+    desc: "Lorem ipsum dolor sit amet consectetur",
+    name: "작성자👴",
+    genDate: "2023.09.01",
+    tag: {
+      headCnt: "3~4인",
+      term: "1개월",
+      role: "프론트엔드",
+    },
+  },
+  {
+    state: true,
+    title: "같이 하실 분",
+    desc: "Lorem ipsum dolor sit amet consectetur",
+    name: "작성자👴",
+    genDate: "2023.09.01",
+    tag: {
+      headCnt: "3~4인",
+      term: "1개월",
+      role: "프론트엔드",
+    },
+  },
+  {
+    state: true,
+    title: "같이 하실 분",
+    desc: "Lorem ipsum dolor sit amet consectetur",
+    name: "작성자👴",
+    genDate: "2023.09.01",
+    tag: {
+      headCnt: "3~4인",
+      term: "1개월",
+      role: "프론트엔드",
+    },
+  },
+]
+
+const MyProject: React.FC = () => {
   return (
     <div>
       <div className='items'>
-        <div className='item'>
-          <span>같이 하실 분</span>
-          <span>Lorem ipsum dolor sit amet consectetur</span>
-          <div>
-            <span>작성자👴</span>
-            <span>2023.09.01</span>
-          </div>
-          <div>
-            <div>1개월</div>
-            <div>3~4인</div>
-            <div>프론트엔드</div>
-          </div>
-        </div>
-        <div className='item'>
-          <span>같이 하실 분</span>
-          <span>Lorem ipsum dolor sit amet consectetur</span>
-          <div>
-            <span>작성자👴</span>
-            <span>2023.09.01</span>
-          </div>
-          <div>
-            <div>1개월</div>
-            <div>3~4인</div>
-            <div>프론트엔드</div>
-          </div>
-        </div>
-        <div className='item'>
-          <span>같이 하실 분</span>
-          <span>Lorem ipsum dolor sit amet consectetur</span>
-          <div>
-            <span>작성자👴</span>
-            <span>2023.09.01</span>
-          </div>
-          <div>
-            <div>1개월</div>
-            <div>3~4인</div>
-            <div>프론트엔드</div>
-          </div>
-        </div>
+          {(
+            data.map((item, idx) => {
+              const {state, title, desc, name, genDate} = item
+              const {headCnt, term, role} = item.tag
+
+              return (
+                <div className='item'>
+                  <span>{title}</span>
+                  <span>{desc}</span>
+                  <div>
+                    <span>{name}</span>
+                    <span>{genDate}</span>
+                  </div>
+                  <div>
+                    <div>{term}</div>
+                    <div>{headCnt}</div>
+                    <div>{role}</div>
+                  </div>
+                </div>
+              )
+            })
+          )}
       </div>
     </div>
   )
