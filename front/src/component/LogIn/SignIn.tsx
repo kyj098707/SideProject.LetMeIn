@@ -30,7 +30,7 @@ const SignIn: React.FC<Props> = (props) => {
   return (
     <div className='signin-container'>
       <span>로그인</span>
-      <form action="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="text" onChange={onChangeId}/> 
         <input type="password" onChange={onChangePassword}/>
         <button type="submit">로그인</button>
