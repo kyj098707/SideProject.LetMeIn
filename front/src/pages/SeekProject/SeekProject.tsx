@@ -41,6 +41,30 @@ let data: Project[] =[
       role: "프론트엔드",
     },
   },
+  {
+    state: true,
+    title: "같이 하실 분",
+    desc: "Lorem ipsum dolor sit amet consectetur",
+    name: "작성자👴",
+    genDate: "2023.09.01",
+    tag: {
+      headCnt: "3~4인",
+      term: "1개월",
+      role: "프론트엔드",
+    },
+  },
+  {
+    state: true,
+    title: "같이 하실 분",
+    desc: "Lorem ipsum dolor sit amet consectetur",
+    name: "작성자👴",
+    genDate: "2023.09.01",
+    tag: {
+      headCnt: "3~4인",
+      term: "1개월",
+      role: "프론트엔드",
+    },
+  },
 ]
 
 

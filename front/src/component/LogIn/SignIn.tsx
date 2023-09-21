@@ -1,4 +1,5 @@
 import React, { useState, Dispatch, SetStateAction } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './SignIn.scss'
 
@@ -7,12 +8,15 @@ interface Props {
 }
 
 const SignIn: React.FC<Props> = (props) => {
+  const navigate = useNavigate()
   const [id, setId] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    navigate('/')
+    
     console.log(id, password)
   }
 
