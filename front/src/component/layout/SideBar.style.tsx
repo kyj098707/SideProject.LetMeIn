@@ -7,10 +7,10 @@ export const SideBarBox = styled.div`
     color: white;
   }
   background-color: black;
-  // padding: 3%;
-  width: 10vw;
+  width: 210px;
+  flex-shrink: 0;
 `
 
 export const LinksBox = styled.div`
-  padding: 3%;
+
 `
