@@ -8,7 +8,7 @@ let data: Project[] =[
   {
     state: true,
     title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur",
+    desc: "Lorem ipsum dolor sit amet consectetur icioco",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -20,7 +20,7 @@ let data: Project[] =[
   {
     state: true,
     title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur",
+    desc: "Lorem ipsum dolor sit amet consectetur icioco",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -32,7 +32,7 @@ let data: Project[] =[
   {
     state: true,
     title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur",
+    desc: "Lorem ipsum dolor sit amet consectetur icioco",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -44,7 +44,7 @@ let data: Project[] =[
   {
     state: true,
     title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur",
+    desc: "Lorem ipsum dolor sit amet consectetur icioco",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -56,7 +56,7 @@ let data: Project[] =[
   {
     state: true,
     title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur",
+    desc: "Lorem ipsum dolor sit amet consectetur icioco",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
