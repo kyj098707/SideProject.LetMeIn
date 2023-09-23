@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const LayoutColBox = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `
 
 export const LayoutRowBox = styled.div`
