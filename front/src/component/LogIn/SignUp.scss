@@ -1,11 +1,48 @@
 .signup-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 50%;
 
+  > span {
+    margin: 35px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    input {
+      margin-bottom: 20px;
+      padding-left: 10px;
+      height: 35px;
+      border-radius: 7px;
+      border: solid 1px black;
+    }
+  
+    button {
+      height: 40px;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      background-color: #582BEB;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   .member-question {
     display: flex;
+    margin: 40px 0;
+    
+    > span:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+      color: blue;
+    }
   }
 }
