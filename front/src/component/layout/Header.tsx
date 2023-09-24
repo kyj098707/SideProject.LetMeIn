@@ -12,6 +12,7 @@ const Header = () => {
   return (
     <HeaderBox>
       <FontAwesomeIcon icon={faBars} />
+      <p>여기에 무엇을 넣으면 좋을지 고민입니다.</p>
     </HeaderBox>
   )
 }
