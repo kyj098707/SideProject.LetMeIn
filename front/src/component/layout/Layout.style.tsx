@@ -10,7 +10,6 @@ export const LayoutColBox = styled.div`
 export const LayoutRowBox = styled.div`
   display: flex;
   // flex-direction: row;
-  height:100%;
 `
 
 export const ContentBox = styled.div`
