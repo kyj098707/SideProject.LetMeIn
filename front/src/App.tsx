@@ -6,6 +6,7 @@ import SeekProject from './pages/SeekProject/SeekProject';
 import CreateProject from './pages/CreateProject/CreateProject';
 import MyProject from './component/MyPage/MyProject';
 import ReqApply from './component/MyPage/ReqApply';
+import MyProfile from './pages/MyPage/MyProfile';
 
 // 리덕스 관련
 import { Provider } from 'react-redux/es/exports';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/createproject" element={<CreateProject />}/>
         <Route path="/myproject" element={<MyProject />}/>
         <Route path="/reqapply" element={<ReqApply />}/>
+        <Route path="/mypage" element={<MyProfile/>}/>
       </Routes>
     </Provider>
   );
