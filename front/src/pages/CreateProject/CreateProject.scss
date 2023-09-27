@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 600px;
 
-    input {
+    > input {
       margin-top: 100px;
       padding-left: 12px;
       height: 45px;
@@ -13,11 +13,26 @@
       border: solid 1px rgb(185, 185, 185);
     }
 
-    span {
+    > span {
       margin-top: 20px;
       color: red;
       font-weight: bold;
     }
+
+
+    > div {
+      display: flex;
+      ul {
+        width: 160px;
+        height: 100px;
+        overflow: auto;
+      }
+      li {
+        list-style: none;
+        height: 30px;
+      }
+    }
+
 
     textarea {
       margin-top: 20px;
