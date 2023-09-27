@@ -101,8 +101,6 @@ const Board = () => {
           <button>F5</button>
           <button>모집글만</button>
           <button><Link to='/createproject'>글쓰기</Link></button>
-          <button><Link to='/myproject'>내 프로젝트(임시)</Link></button>
-          <button><Link to='/reqapply'>신청현황(임시)</Link></button>
           <button><Link to='/login'>로그인(임시)</Link></button>
         </div>
       </div>

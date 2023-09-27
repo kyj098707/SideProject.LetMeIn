@@ -12,5 +12,5 @@ export type Tag = {
   term: string,
   headCnt: string,
   role: string,
-  lang?: string,
+  lang?: string[],
 }
