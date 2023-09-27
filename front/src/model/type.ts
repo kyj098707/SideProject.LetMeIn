@@ -1,4 +1,5 @@
 export type Project = {
+  postNum: number,
   state: boolean,
   title: string,
   desc: string,
@@ -8,8 +9,8 @@ export type Project = {
 }
 
 export type Tag = {
-  headCnt: string,
   term: string,
+  headCnt: string,
   role: string,
   lang?: string,
 }
