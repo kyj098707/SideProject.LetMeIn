@@ -6,9 +6,10 @@ import './SeekProject.scss'
 
 let data: Project[] =[
   {
+    postNum: 1,
     state: true,
-    title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur icioco",
+    title: "같이 하실 분1",
+    desc: "Lorem ipsum dolor sit amet consectetur ioicn skyep",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -18,9 +19,10 @@ let data: Project[] =[
     },
   },
   {
+    postNum: 2,
     state: true,
-    title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur icioco",
+    title: "같이 하실 분2",
+    desc: "Lorem ipsum dolor sit amet consectetur ioicn skyep",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -30,9 +32,10 @@ let data: Project[] =[
     },
   },
   {
+    postNum: 3,
     state: true,
-    title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur icioco",
+    title: "같이 하실 분3",
+    desc: "Lorem ipsum dolor sit amet consectetur ioicn skyep",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -42,9 +45,10 @@ let data: Project[] =[
     },
   },
   {
+    postNum: 4,
     state: true,
-    title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur icioco",
+    title: "같이 하실 분4",
+    desc: "Lorem ipsum dolor sit amet consectetur ioicn skyep",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
@@ -54,9 +58,10 @@ let data: Project[] =[
     },
   },
   {
+    postNum: 5,
     state: true,
-    title: "같이 하실 분",
-    desc: "Lorem ipsum dolor sit amet consectetur icioco",
+    title: "같이 하실 분5",
+    desc: "Lorem ipsum dolor sit amet consectetur ioicn skyep",
     name: "작성자👴",
     genDate: "2023.09.01",
     tag: {
