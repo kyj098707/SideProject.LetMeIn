@@ -1,7 +1,7 @@
 import React from 'react'
 import './ReqApply.scss'
 
-const ReqCurSit = () => {
+const ReqApply = () => {
   return (
     <div className='ReqCurSit-container'>
       <div>
@@ -22,4 +22,4 @@ const ReqCurSit = () => {
   )
 }
 
-export default ReqCurSit
+export default ReqApply
