@@ -1,18 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { CommentOutlined, GithubOutlined, UserOutlined } from '@ant-design/icons'
+import { Avatar, Space } from 'antd'
+import { HeaderBox, LogoBox } from './Layout.style'
+import { Link } from 'react-router-dom'
 
-const HeaderBox = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`
+
 
 const Header = () => {
   return (
     <HeaderBox>
-      <FontAwesomeIcon icon={faBars} />
-      <p>여기에 무엇을 넣으면 좋을지 고민입니다.</p>
+
+      <GithubOutlined style={{fontSize:'40px'}}/>
+      <Link to='/'>프로젝트 구해요</Link>
+      <LogoBox>
+        <CommentOutlined style={{fontSize:'40px', marginLeft:'55%', marginRight:'55%'}}/>
+        <FontAwesomeIcon icon={faBars} style={{fontSize:'40px', marginRight:'15%'}}/>
+        <Space size={16} wrap>
+          <Avatar icon={<UserOutlined />} size={40}/>
+        </Space>
+      </LogoBox>
     </HeaderBox>
   )
 }
