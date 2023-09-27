@@ -1,0 +1,31 @@
+.createProject-container {
+  .contents {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    input {
+      margin-top: 100px;
+      padding-left: 12px;
+      height: 45px;
+      font-size: 18px;
+      border-radius: 15px;
+      border: solid 1px rgb(185, 185, 185);
+    }
+
+    span {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+    }
+
+    textarea {
+      margin-top: 20px;
+      padding: 14px;
+      resize: none;
+      font-size: 18px;
+      border-radius: 10px;
+      border: solid 1px rgb(185, 185, 185);
+    }
+  }
+}

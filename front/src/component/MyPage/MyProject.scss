@@ -1,0 +1,46 @@
+.myproject-container {
+  .items {
+    display: flex;
+    margin-top: 100px;
+    width: 1150px;
+    flex-wrap: wrap;
+  
+    .item {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      padding: 20px;
+      margin: 0 48px 40px 0;
+      width: 310px;
+      border-radius: 10px;
+      border: solid 1px rgb(220, 220, 220);
+      transition: all 0.25s ease;
+  
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+      
+      > span:nth-child(2) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      > div:nth-child(3) {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+      }
+      > div:last-child {
+        display: flex;
+        > div{
+          margin-right: 10px;
+        }
+      }
+  
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
