@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import SignIn from '../../component/LogIn/SignIn'
 import SignUp from '../../component/LogIn/SignUp'
-import './LogIn.scss'
 
 // 나중에 지울 코드 : ㅅㅈㅍ
 import { useDispatch, useSelector } from 'react-redux'
@@ -21,19 +21,44 @@ const LogIn: React.FC = () => {
   // 나중에 지울 코드
 
   return (
-    <div className='login-container'>
-      <div className='title'>Let Me In</div>
-      <div className='content'>
-        <div className='logo'></div>
+    <ContainerBox>
+      <TitleBox>Let Me In</TitleBox>
+      <ContentBox>
+        <LogoBox />
         {
           {
             'signIn': <SignIn setActiveLink={setActiveLink}/>,
             'signUp': <SignUp setActiveLink={setActiveLink}/>
           }[activeLink]
         }
-      </div>
-    </div>
+      </ContentBox>
+    </ContainerBox>
   )
 }
 
 export default LogIn
+
+const ContainerBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const TitleBox = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+`
+
+const ContentBox = styled.div`
+  display: flex;
+  margin-top: 70px;
+  width: 800px;
+  height: 500px;
+  border: solid 1px black;
+`
+
+const LogoBox = styled.div`
+  width: 50%;
+  background-color: #54AEFF;
+`
