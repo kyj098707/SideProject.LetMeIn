@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {Project} from '../../model/type'
-import './SeekProject.scss'
-
+import styled from 'styled-components'
 
 let data: Project[] =[
   {
@@ -75,7 +74,7 @@ let data: Project[] =[
 
 const Board = () => {
   return (
-    <div className='board-content'>
+    <ContainerBox>
       <div className='category'>
         <div>
           <span>기간</span>
@@ -129,8 +128,82 @@ const Board = () => {
           })
         )}
       </div>
-    </div>
+    </ContainerBox>
   )
 }
 
 export default Board
+
+const ContainerBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 100px;
+
+    > div {
+      width:25%;
+      text-align: center;
+    }
+  }
+
+  .content-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .items {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      padding: 20px;
+      margin: 0 48px 40px 0;
+      width: 310px;
+      border-radius: 10px;
+      border: solid 1px rgb(220, 220, 220);
+      transition: all 0.25s ease;
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+      
+      > span:nth-child(2) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      > div:nth-child(3) {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+      }
+      > div:last-child {
+        display: flex;
+        > div{
+          margin-right: 10px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+`
