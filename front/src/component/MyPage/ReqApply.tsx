@@ -13,10 +13,10 @@ const ReqApply = () => {
       <ItemBox>
         <span>'프로젝트 하실 분~' 프로젝트에 가입 신청을 하였습니다.</span>
         <span>가입 신청 결과를 기다려 주세요</span>
-        <ItemBtnBox>
-          <ItemBtn>프로필</ItemBtn>
-          <ItemBtn>게시물</ItemBtn>
-        </ItemBtnBox>
+        <div>
+          <div>프로필</div>
+          <div>게시물</div>
+        </div>
       </ItemBox>
     </ContainerBox>
   )
@@ -34,13 +34,12 @@ const ItemBox = styled.div`
   padding: 20px;
   border-radius: 10px;
   border: solid 1px rgb(223, 223, 223);
-`
 
-const ItemBtnBox = styled.div`
-  display: flex;
-`
-
-const ItemBtn = styled.div`
-  text-align: center;
-  width: 50%;
+  > div {
+    display: flex;
+    div {
+      text-align: center;
+      width: 50%;
+    }
+  }
 `
