@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {Project} from '../../model/type'
 import styled from 'styled-components'
+import {Project} from '../../model/type'
+import ProjectModal from '../../component/ProjectModal'
 
 let data: Project[] =[
   {
@@ -73,6 +74,14 @@ let data: Project[] =[
 
 
 const Board = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleOpenModal = (e: React.MouseEvent<HTMLDivElement>) => {
+    setModalOpen(true)
+
+    console.log(e.currentTarget.id)
+  }
+
   return (
     <ContainerBox>
       <div className='category'>
@@ -104,14 +113,18 @@ const Board = () => {
         </div>
       </div>
       
+      <ProjectModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+
       <div className='items'>
         {(
           data.map((item, idx) => {
-            const {state, title, desc, name, genDate} = item
+            const {postNum, state, title, desc, name, genDate} = item
             const {headCnt, term, role} = item.tag
 
             return (
-              <div className='item'>
+              <div className='item'
+                   onClick={handleOpenModal}
+                   id={String(postNum)}>
                 <span>{title}</span>
                 <span>{desc}</span>
                 <div>

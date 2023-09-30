@@ -24,7 +24,7 @@ const LogIn: React.FC = () => {
     <ContainerBox>
       <TitleBox>Let Me In</TitleBox>
       <ContentBox>
-        <LogoBox />
+        <div className='logo' />
         {
           {
             'signIn': <SignIn setActiveLink={setActiveLink}/>,
@@ -56,9 +56,9 @@ const ContentBox = styled.div`
   width: 800px;
   height: 500px;
   border: solid 1px black;
-`
 
-const LogoBox = styled.div`
-  width: 50%;
-  background-color: #54AEFF;
+  .logo {
+    width: 50%;
+    background-color: #54AEFF;
+  }
 `
