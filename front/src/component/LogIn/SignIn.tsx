@@ -32,7 +32,7 @@ const SignIn: React.FC<Props> = (props) => {
   
   return (
     <ContainerBox>
-      <TitleSpan>로그인</TitleSpan>
+      <span>로그인</span>
       <LoginForm onSubmit={handleSubmit}>
         <LoginInput type="text" placeholder="아이디" onChange={onChangeId}/> 
         <LoginInput type="password" placeholder="비밀번호" onChange={onChangePassword}/>
@@ -55,12 +55,12 @@ const ContainerBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50%;
-`
-
-const TitleSpan = styled.span`
-  margin: 35px 0;
-  font-size: 20px;
-  font-weight: bold;
+  
+  > span {
+    margin: 35px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
 `
 
 const LoginForm = styled.form`

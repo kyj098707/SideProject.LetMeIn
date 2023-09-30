@@ -27,12 +27,12 @@ const SignUp: React.FC<Props> = (props) => {
     e.preventDefault()
     
     console.log(values)
-    // props.setActiveLink('signIn')
+    props.setActiveLink('signIn')
   }
 
   return (
     <ContainerBox>
-      <TitleSpan>회원가입</TitleSpan>
+      <span>회원가입</span>
       <SignUpForm onSubmit={handleSubmit}>
         <SignUpInput 
           name="id" 
@@ -70,12 +70,12 @@ const ContainerBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50%;
-`
 
-const TitleSpan = styled.span`
-  margin: 35px 0;
-  font-size: 20px;
-  font-weight: bold;
+  > span {
+    margin: 35px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
 `
 
 const SignUpForm = styled.form`
