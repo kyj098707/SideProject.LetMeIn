@@ -1,6 +1,7 @@
 package com.example.back.domain;
 
 
+import com.example.back.dto.UserDto;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -15,6 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="user_id")
     private Long id;
 
     @Column(length = 20, nullable = false)
@@ -26,6 +28,13 @@ public class User {
     @Column(length = 10)
     private String nickname;
 
-
+    public UserDto toDto() {
+        return UserDto.builder()
+                .id(this.id)
+                .username(this.username)
+                .pw(this.pw)
+                .nickname(this.nickname)
+                .build();
+    }
 
 }
