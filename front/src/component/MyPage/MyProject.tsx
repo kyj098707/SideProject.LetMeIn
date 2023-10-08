@@ -74,16 +74,16 @@ let data: Project[] =[
 
 const MyProject: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [item, setItem] = useState<Project>(data[0])
 
   const handleOpenModal = (e: React.MouseEvent<HTMLDivElement>) => {
     setModalOpen(true)
-    
-    console.log(e.currentTarget.id)
+    setItem(data[Number(e.currentTarget.id)-1])
   }
 
   return (
     <ContainerBox>
-      <ProjectModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+      <ProjectModal modalOpen={modalOpen} setModalOpen={setModalOpen} item={item}/>
       {(
         data.map((item, idx) => {
           const {postNum, state, title, desc, name, genDate} = item
