@@ -75,11 +75,11 @@ let data: Project[] =[
 
 const Board = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [item, setItem] = useState<Project>(data[0])
 
   const handleOpenModal = (e: React.MouseEvent<HTMLDivElement>) => {
     setModalOpen(true)
-
-    console.log(e.currentTarget.id)
+    setItem(data[Number(e.currentTarget.id)-1])
   }
 
   return (
@@ -113,7 +113,7 @@ const Board = () => {
         </div>
       </div>
       
-      <ProjectModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <ProjectModal modalOpen={modalOpen} setModalOpen={setModalOpen} item={item}/>
 
       <div className='items'>
         {(
