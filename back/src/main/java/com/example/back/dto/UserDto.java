@@ -24,16 +24,7 @@ public class UserDto {
 
     private String nickname;
 
-    // List<User> -> List<DTO>
-    public UserDto(User user){
-        this.id = user.getId();
-        this.username = user.getUsername();
-        this.pw = user.getPw();
-        this.nickname = user.getNickname();
-    }
-
-    // DTO -> User
-    public User toEntity(UserDto userDto) {
+    public User toEntity() {
         return User.builder()
                 .id(this.id)
                 .username(this.username)
