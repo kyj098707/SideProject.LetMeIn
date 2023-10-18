@@ -125,3 +125,4 @@ $RECYCLE.BIN/
 myvenv
 .idea
 __pycache__
+db.sqlite3
