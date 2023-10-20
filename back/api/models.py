@@ -14,3 +14,29 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = BaseUserManager()
     
+
+class Skill(models.Model):
+    name = models.CharField(max_length=20)
+    number = models.IntegerField(default=0)
+
+
+class Posting(models.Model):
+    title = models.CharField(max_length=100)
+    period = models.IntegerField()
+    content = models.TextField()
+    
+    representative_skill = models.CharField(max_length=104) 
+    skills = models.ManyToManyField(Skill)
+
+    total_member = models.IntegerField()
+    cur_member = models.IntegerField(default=1)
+
+    leader = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now_add=True)    
+    
+
+    def __str__(self):
+        return self.title
+
