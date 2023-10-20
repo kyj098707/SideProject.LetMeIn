@@ -178,7 +178,7 @@ const ContainerBox = styled.div`
   .items {
     display: flex;
     margin-top: 100px;
-    width: 100%;
+    width: 1155px;
     flex-wrap: wrap;
 
     .item {
