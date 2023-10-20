@@ -32,3 +32,7 @@ class LoginSerializer(TokenObtainPairSerializer):
 
         return data
         
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fiedls = "__all__"
