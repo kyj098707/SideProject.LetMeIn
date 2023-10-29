@@ -6,4 +6,5 @@ urlpatterns = [
     path('login/', users.LoginView.as_view()),
 
     path('posting/', postings.create_or_list),
+    path('skill/', postings.create_or_list_skill),
 ]
